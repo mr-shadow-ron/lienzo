@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lienzo Helado - Heladería & Galería de Arte</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1a;
+        }
+        header {
+            background: linear-gradient(135deg, #111111, #333333);
+            color: #f5f5f5;
+            padding: 50px 20px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        nav {
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        nav a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #f39c12;
+            color: #111;
+        }
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+        .section {
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+        h2 {
+            color: #222;
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f39c12;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        p, ul li {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: left;
+        }
+        ul li::before {
+            content: "\2022";
+            color: #f39c12;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .gallery, .menu-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .gallery img, .menu-gallery img {
+            width: 320px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery img:hover, .menu-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        footer {
+            background-color: #111;
+            color: #bbb;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Lienzo Helado<br>
+        <small style="font-size: 18px;">El arte de hacer el helado perfecto</small>
+    </header>
+    <nav>
+        <a href="#negocio">Negocio</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#mision">Misión y Visión</a>
+        <a href="#valores">Valores</a>
+        <a href="#socios">Socios</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#menu">Menú</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="container">
+        <section class="section" id="negocio">
+            <h2>Definición del negocio</h2>
+            <p>"Lienzo Helado" fusiona arte y helados en un solo lugar. Inspirados en "La noche estrellada" de Van Gogh, cada helado es una obra de arte comestible que transforma la cultura y la gastronomía en una experiencia única.</p>
+        </section>
+
+        <section class="section" id="experiencia">
+            <h2>Experiencia</h2>
+            <p>Más que una heladería, "Lienzo Helado" es una galería viviente donde puedes deleitar tus sentidos: disfruta helados artesanales mientras aprecias obras de arte de artistas locales en un entorno creativo y acogedor.</p>
+        </section>
+
+        <section class="section" id="mision">
+            <h2>Misión y Visión</h2>
+            <p><strong>Misión:</strong> Ofrecer una experiencia sensorial única al combinar helados artesanales de alta calidad con expresiones artísticas, creando momentos inolvidables.</p>
+            <p><strong>Visión:</strong> Ser un referente innovador en la industria de heladerías, expandiendo nuestro concepto de arte y gastronomía a nuevas localidades y mercados.</p>
+        </section>
+
+        <section class="section" id="valores">
+            <h2>Valores</h2>
+            <ul>
+                <li><strong>Calidad:</strong> Excelencia en productos y servicios.</li>
+                <li><strong>Integridad:</strong> Honestidad y ética en nuestras acciones.</li>
+                <li><strong>Competitividad:</strong> Mejorar continuamente y aprender de los desafíos.</li>
+                <li><strong>Responsabilidad:</strong> Cumplir compromisos y asumir consecuencias.</li>
+                <li><strong>Equidad:</strong> Trato justo y respetuoso para todos.</li>
+                <li><strong>Respeto:</strong> Valorar a cada persona, sus opiniones y derechos.</li>
+            </ul>
+        </section>
+
+        <section class="section" id="socios">
+            <h2>Socios</h2>
+            <p>Catherine Naomi Ángel Ávila, Jose Luis Arreguín Ponce, Aldo Claramonte Correa, Fátima Alejandra Díaz de León Read, Cristopher Aaron Domínguez Mora, Alanisse Aimee Gonzales Arellano, Guillermo Ángel Hernández Díaz, Axel Gael Lúa Campos, Diego Abraham Márquez Dávalos, Alan Yuriam Martínez Reyes, Diego Fernando Muñoz Gutiérrez, Luis Jaziel Nuñez Rodríguez, Jorge Luis Vega Bravo.</p>
+        </section>
+
+        <section class="section" id="ubicacion">
+            <h2>Ubicación</h2>
+            <p>📍 Guadalajara, Jalisco. Calle El Chaco 3200, Providencia, 44630.</p>
+        </section>
+
+        <section class="section" id="menu">
+            <h2>Galería del Menú</h2>
+            <div class="menu-gallery">
+                <P>Noche estrellada</P>
+                <img src="nocheestrellada.jpg" alt="Helado de arte 1">
+                <img src="Elgrito.jpg" alt="Helado de arte 2">
+                <img src="monalisa.jpg" alt="Helado de arte 3">
+            </div>
+        </section>
+
+        <section class="section" id="galeria">
+            <h2>Galería de Experiencia</h2>
+            <div class="gallery">
+                <img src="monalisa.jpg" alt="Helado artístico">
+                <img src="galeria.jpeg" alt="Galería de arte">
+                <img src="ambiente.jpeg" alt="Ambiente creativo">
+            </div>
+        </section>
+
+        <section class="section" id="contacto">
+            <h2>Contacto</h2>
+            <p>📞 Teléfono: 555-1234-567</p>
+            <p>📧 Email: contacto@lienzohelado.com</p>
+        </section>
+    </div>
+
+    <footer>
+        Desarrollado por Cristopher Aarón Domínguez Mora </p> &copy; 2025 Lienzo Helado - Todos los derechos reservados.
+    </footer>
+</body>
+</html> 
