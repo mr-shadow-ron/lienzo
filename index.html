@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lienzo Helado - Heladería & Galería de Arte</title>
     <style>
-        body {
+    body {
             font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
@@ -87,14 +87,53 @@
             width: 1em;
             margin-left: -1em;
         }
-        .gallery, .menu-gallery {
+        .menu-gallery {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 25px;
             margin-top: 30px;
         }
-        .gallery img, .menu-gallery img {
+        .menu-item {
+            position: relative;
+            width: 320px;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .menu-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .menu-item:hover img {
+            transform: scale(1.1);
+        }
+        .menu-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 16px;
+        }
+        .menu-item:hover .menu-info {
+            opacity: 1;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .gallery img {
             width: 320px;
             height: 220px;
             object-fit: cover;
@@ -102,9 +141,17 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .gallery img:hover, .menu-gallery img:hover {
+        .gallery img:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+            vertical-align: middle;
         }
         footer {
             background-color: #111;
@@ -135,18 +182,79 @@
         <a href="#menu">Menú</a>
         <a href="#galeria">Galería</a>
         <a href="#contacto">Contacto</a>
+        <a href="#Menú especial">Menú especial</a>
     </nav>
     <div class="container">
         <section class="section" id="negocio">
             <h2>Definición del negocio</h2>
             <p>"Lienzo Helado" fusiona arte y helados en un solo lugar. Inspirados en "La noche estrellada" de Van Gogh, cada helado es una obra de arte comestible que transforma la cultura y la gastronomía en una experiencia única.</p>
         </section>
-
+ 
         <section class="section" id="experiencia">
             <h2>Experiencia</h2>
             <p>Más que una heladería, "Lienzo Helado" es una galería viviente donde puedes deleitar tus sentidos: disfruta helados artesanales mientras aprecias obras de arte de artistas locales en un entorno creativo y acogedor.</p>
         </section>
+        <section class="section" id="Menú especial">
+            <h2>Menú Tematico</h2>
+            <div class="menu-gallery">
+                <div class="menu-item">
+                    <img src="nocheestrellada.jpeg" alt="Helado de arte 1">
+                    <div class="menu-info">
+                        Van Gogh</br> 
+                        Helado de algodón de azúcar con remolinos de mermelada de mora azul con un palito de chocolate representando la pintura de Van Gogh 
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="Elgrito.jpeg" alt="Helado de arte 2">
+                    <div class="menu-info">
+                        El grito </br>
+                        Helado de mango con chile en polvo y chamoy representando la intensidad del cielo de la pintura de Edvard Munch. 
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="monalisa.jpeg" alt="Helado de arte 3">
+                    <div class="menu-info">
+                        Mona lisa<br>Dulce de Leche
+                        Helado de vainilla con nuez y un palito de chocolate representando los colores que se tienen en la obra de Leonardo Da Vinci 
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="elbeso.jpeg" alt="Helado de arte 1">
+                    <div class="menu-info">
+                        El beso</br> 
+                        Helado de oreo y almendras con toques dorados de caramelo, expresando la calidez de la obra de Gustav Klimt 
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="viva.jpeg" alt="Helado de arte 1">
+                    <div class="menu-info">
+                        Viva la vida</br> 
+                        Helado de limón con gomitas de sandia y chile en polvo representando la fruta principal de la obra de Frida Kahlo 
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="moon.jpeg" alt="Helado de arte 1">
+                    <div class="menu-info">
+                        Moon Dog</br> 
+                        Helado de choco menta con chispas de color azul y un palito de chocolate representando los colores más representativos de la obra de Rufino Tamayo
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="menu">
+            <h2>Menú clasico</h2> </br>
+            <img src="menu.jpeg" alt="Menú">
+        </section>
+        <section class="section" id="galeria">
+            <h2>Galería de Experiencia</h2>
+            <div class="gallery">
+                <img src="nocheestrellada.jpg" alt="Helado artístico">
+                <img src="galeria.jpeg" alt="Galería de arte">
+                <img src="ambiente.jpeg" alt="Ambiente creativo">
+            </div>
+        </section>
 
+        
         <section class="section" id="mision">
             <h2>Misión y Visión</h2>
             <p><strong>Misión:</strong> Ofrecer una experiencia sensorial única al combinar helados artesanales de alta calidad con expresiones artísticas, creando momentos inolvidables.</p>
@@ -188,33 +296,21 @@
             <p>📍 Guadalajara, Jalisco. Calle El Chaco 3200, Providencia, 44630.</p>
         </section>
 
-        <section class="section" id="menu">
-            <h2>Galería del Menú</h2>
-            <div class="menu-gallery">
-                <img src="nocheestrellada.jpg" alt="Helado de arte 1">
-                <img src="Elgrito.jpg" alt="Helado de arte 2">
-                <img src="monalisa.jpg" alt="Helado de arte 3">
-            </div>
-        </section>
-
-        <section class="section" id="galeria">
-            <h2>Galería de Experiencia</h2>
-            <div class="gallery">
-                <img src="monalisa.jpg" alt="Helado artístico">
-                <img src="galeria.jpeg" alt="Galería de arte">
-                <img src="ambiente.jpeg" alt="Ambiente creativo">
-            </div>
-        </section>
-
         <section class="section" id="contacto">
             <h2>Contacto</h2>
             <p>📞 Teléfono: 555-1234-567</p>
             <p>📧 Email: contacto@lienzohelado.com</p>
+            <div class="social-icons">
+                <a href="https://www.tiktok.com/@lienzo.helado?_t=ZS-8vtM2Lao5A2&_r=1"><img src="tik.png" alt="TikTok"></a>
+                <a href="https://www.instagram.com/el_lienzo_helado?igsh=bjFoY2t3bjR0ZXcx&utm_source=qr"><img src="ig.png" alt="Instagram"></a>
+                <a href="https://www.youtube.com/@LienzoHelado"><img src="yt.png" alt="YouTube"></a>
+                <a href="https://www.facebook.com/profile.php?id=61575730893251"><img src="fb.png" alt="Facebook"></a>
+            </div>
         </section>
     </div>
-
+ 
     <footer>
         Desarrollado por Cristopher Aarón Domínguez Mora </p> &copy; 2025 Lienzo Helado - Todos los derechos reservados.
     </footer>
 </body>
-</html> 
+</html>  
